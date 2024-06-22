@@ -65,7 +65,7 @@ with open(csv_file_path, mode='w', newline='') as file:
         #========================================Result findings================================================
 
         # Predict objects in the frame using the YOLO model
-        result = model.predict(frame, conf=0.1, iou=0.1)  # No class filter here, we want all classes
+        result = model.predict(frame, conf=0.1, iou=0.1)  #  we want all classes
 
         # Loop through each detection in the result
         for detection in result[0].boxes:
